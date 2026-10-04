@@ -38,6 +38,9 @@
             });
           }
         });
+        if (window.location.hash && (window.location.hash.indexOf("recovery_token") !== -1 || window.location.hash.indexOf("invite_token") !== -1 || window.location.hash.indexOf("confirmation_token") !== -1)) {
+          window.netlifyIdentity.open();
+        }
       }
     </script>
   </body>
